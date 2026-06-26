@@ -50,6 +50,22 @@
     .footer a{color:#cbd5e0}
     .switch-link{display:inline-block;margin-top:14px;padding:8px 18px;background:#2d3748;color:#fff;border-radius:20px;font-size:13px}
   </style>
+  <script>
+    (function(){
+      if(location.search.indexOf('from=desktop')!==-1){
+        localStorage.setItem('viewPreference','desktop');
+        history.replaceState(null,'',location.pathname);
+        return;
+      }
+      var pref=localStorage.getItem('viewPreference');
+      if(pref==='mobile')return;
+      var ua=navigator.userAgent;
+      var isDesktop=!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+      if(isDesktop&&pref!=='mobile'){
+        location.replace('../en/index.html?from=mobile');
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -184,7 +200,7 @@
   <footer class="footer">
     <p>Everquick Supply-Chain Management (Guangdong) Co., Ltd.</p>
     <p style="margin-top:8px;opacity:0.6;">&copy; 2026 All rights reserved.</p>
-    <a href="../en/index.html" class="switch-link">💻 Switch to Desktop Version</a>
+    <a href="../en/index.html?from=mobile" class="switch-link">💻 Switch to Desktop Version</a>
   </footer>
 
 </body>

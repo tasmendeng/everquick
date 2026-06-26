@@ -2,6 +2,38 @@
    企业网站全局交互脚本
    ======================================== */
 
+// ===== 设备检测 & 自动跳转 =====
+(function() {
+  // 如果 URL 带 ?from=mobile，说明用户手动选了手机版，存偏好
+  if (location.search.indexOf('from=mobile') !== -1) {
+    localStorage.setItem('viewPreference', 'mobile');
+    // 清理 URL 参数
+    history.replaceState(null, '', location.pathname);
+    return;
+  }
+
+  var pref = localStorage.getItem('viewPreference');
+  if (pref === 'desktop') return; // 用户明确选了桌面版，不跳转
+
+  var ua = navigator.userAgent;
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua) ||
+                 (navigator.maxTouchPoints > 1 && window.innerWidth < 1024);
+
+  if (isMobile && pref !== 'desktop') {
+    // 当前是桌面版页面，跳到对应语言手机版
+    var path = location.pathname;
+    var mobileUrl;
+    if (path.indexOf('/en/') !== -1) {
+      mobileUrl = location.origin + path.replace(/\/en\/.*/, '/mobile/en.html');
+    } else {
+      mobileUrl = location.origin + path.replace(/\/cn\/.*/, '/mobile/cn.html').replace(/\/index\.html$/, '/mobile/cn.html');
+    }
+    if (mobileUrl !== location.href) {
+      location.replace(mobileUrl);
+    }
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== 移动端菜单切换 =====
