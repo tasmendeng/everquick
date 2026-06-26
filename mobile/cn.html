@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="广东恒讯供应链管理有限公司手机版 — 一站式供应链管理服务商。">
+  <title>恒讯供应链</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:#3182ce;text-decoration:none}
+    ul{list-style:none}
+
+    /* 顶部导航 */
+    .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+    .header-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .header-logo img{height:44px;width:auto}
+    .header-lang{display:flex;gap:4px;font-size:13px;font-weight:500}
+    .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
+    .header-lang a.active{color:#3182ce;background:#edf2f7}
+
+    /* 版块 */
+    .section{padding:40px 20px}
+    .section-alt{background:#f7fafc}
+    .section-title{text-align:center;margin-bottom:28px}
+    .section-title h2{font-size:24px;color:#1a202c;margin-bottom:6px}
+    .section-title p{font-size:14px;color:#718096}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:48px 20px;text-align:center}
+    .hero h1{font-size:26px;font-weight:800;margin-bottom:10px}
+    .hero p{font-size:15px;opacity:0.85;margin-bottom:20px}
+    .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;transition:.2s}
+    .btn-gold{background:#d69e2e;color:#fff}
+    .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)}
+
+    /* 服务 */
+    .svc-list{display:flex;flex-direction:column;gap:14px}
+    .svc-item{background:#fff;border-radius:10px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:14px;align-items:flex-start}
+    .svc-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;background:#edf2f7;border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .svc-text h3{font-size:16px;color:#1a202c;margin-bottom:4px}
+    .svc-text p{font-size:13px;color:#718096}
+
+    /* 联系 */
+    .contact-row{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto}
+    .contact-card{display:flex;align-items:center;gap:14px;background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+    .contact-card-icon{font-size:24px;width:42px;height:42px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .contact-card h4{font-size:14px;color:#1a202c}
+    .contact-card p{font-size:13px;color:#718096}
+
+    /* 页脚 */
+    .footer{background:#1a202c;color:#cbd5e0;padding:32px 20px;text-align:center;font-size:13px}
+    .footer a{color:#cbd5e0}
+    .switch-link{display:inline-block;margin-top:14px;padding:8px 18px;background:#2d3748;color:#fff;border-radius:20px;font-size:13px}
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="header-logo">
+      <img src="../images/logo.jpg" alt="恒讯">
+    </a>
+    <div class="header-lang">
+      <a href="cn.html" class="active">中文</a>
+      <a href="en.html">EN</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>全球供应链<br>高效管理</h1>
+    <p>广东恒讯供应链管理有限公司，提供全球采购、物流、仓储、中国进口清关等一站式供应链解决方案。</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-gold">查看服务</a>
+      <a href="#contact" class="btn btn-outline">联系我们</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-title">
+      <h2>关于我们</h2>
+      <p>深耕供应链，链接全球，服务中国</p>
+    </div>
+    <p style="text-align:center;max-width:480px;margin:0 auto;font-size:14px;line-height:1.9;">
+      广东恒讯供应链管理有限公司（Everquick Supply-Chain Management）总部位于江门，成立于2021年，注册资本500万元。公司以"高效、可靠、透明"为服务理念，业务涵盖供应链管理、国际货运代理、普通货物仓储、国内贸易代理等领域。
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;">
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🎯</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">客户至上</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🔒</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">安全可靠</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🤝</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">诚信为本</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">📈</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">持续优化</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="services">
+    <div class="section-title">
+      <h2>核心服务</h2>
+      <p>覆盖供应链全链路的一站式服务能力</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item">
+        <div class="svc-icon">🔍</div>
+        <div class="svc-text">
+          <h3>采购与供应商管理</h3>
+          <p>全球寻源、供应商评估、合同谈判、品质管控，降低采购成本15%以上。</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">🚚</div>
+        <div class="svc-text">
+          <h3>国际物流运输</h3>
+          <p>海运、空运、陆运多式联运，整合优质运力，保证时效与成本最优平衡。</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">🏭</div>
+        <div class="svc-text">
+          <h3>仓储与库存管理</h3>
+          <p>自营+合作仓储网络，WMS智能管理，入库质检、分拣打包、一件代发。</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">📋</div>
+        <div class="svc-text">
+          <h3>关务与合规咨询</h3>
+          <p>专业报关报检，进出口清关、HS编码归类、AEO认证辅导，贸易畅通无阻。</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">💰</div>
+        <div class="svc-text">
+          <h3>供应链金融</h3>
+          <p>仓单质押、应收账款融资、信用证结算，帮助企业缓解资金压力。</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">📊</div>
+        <div class="svc-text">
+          <h3>供应链数字化</h3>
+          <p>可视化平台、OMS、TMS系统，全链路实时监控与数据分析。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-title">
+      <h2>联系我们</h2>
+      <p>期待与您交流，共同探索供应链优化的更多可能</p>
+    </div>
+    <div class="contact-row">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div>
+          <h4>电话</h4>
+          <p>0086-13702274595</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div>
+          <h4>邮箱</h4>
+          <p>tasmendeng@hotmail.com</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div>
+          <h4>地址</h4>
+          <p>中国广东省江门市东华一路19号602室</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>广东恒讯供应链管理有限公司</p>
+    <p style="margin-top:4px;">Everquick Supply-Chain Management (Guangdong) Co., Ltd.</p>
+    <p style="margin-top:8px;opacity:0.6;">&copy; 2026 版权所有</p>
+    <a href="../cn/index.html" class="switch-link">💻 切换到电脑版</a>
+  </footer>
+
+</body>
+</html>

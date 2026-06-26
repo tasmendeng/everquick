@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Everquick Supply-Chain Management — One-stop supply chain solutions.">
+  <title>Everquick Supply-Chain</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:#3182ce;text-decoration:none}
+    ul{list-style:none}
+
+    .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+    .header-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .header-logo img{height:44px;width:auto}
+    .header-lang{display:flex;gap:4px;font-size:13px;font-weight:500}
+    .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
+    .header-lang a.active{color:#3182ce;background:#edf2f7}
+
+    .section{padding:40px 20px}
+    .section-alt{background:#f7fafc}
+    .section-title{text-align:center;margin-bottom:28px}
+    .section-title h2{font-size:24px;color:#1a202c;margin-bottom:6px}
+    .section-title p{font-size:14px;color:#718096}
+
+    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:48px 20px;text-align:center}
+    .hero h1{font-size:26px;font-weight:800;margin-bottom:10px}
+    .hero p{font-size:15px;opacity:0.85;margin-bottom:20px}
+    .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;transition:.2s}
+    .btn-gold{background:#d69e2e;color:#fff}
+    .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)}
+
+    .svc-list{display:flex;flex-direction:column;gap:14px}
+    .svc-item{background:#fff;border-radius:10px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:14px;align-items:flex-start}
+    .svc-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;background:#edf2f7;border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .svc-text h3{font-size:16px;color:#1a202c;margin-bottom:4px}
+    .svc-text p{font-size:13px;color:#718096}
+
+    .contact-row{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto}
+    .contact-card{display:flex;align-items:center;gap:14px;background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+    .contact-card-icon{font-size:24px;width:42px;height:42px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .contact-card h4{font-size:14px;color:#1a202c}
+    .contact-card p{font-size:13px;color:#718096}
+
+    .footer{background:#1a202c;color:#cbd5e0;padding:32px 20px;text-align:center;font-size:13px}
+    .footer a{color:#cbd5e0}
+    .switch-link{display:inline-block;margin-top:14px;padding:8px 18px;background:#2d3748;color:#fff;border-radius:20px;font-size:13px}
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="header-logo">
+      <img src="../images/logo.jpg" alt="Everquick">
+    </a>
+    <div class="header-lang">
+      <a href="cn.html">中文</a>
+      <a href="en.html" class="active">EN</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Global Supply Chain<br>Efficient Management</h1>
+    <p>Everquick Supply-Chain Management provides one-stop solutions: global procurement, logistics, warehousing, China import clearance, and more.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-gold">Our Services</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-title">
+      <h2>About Us</h2>
+      <p>Deep expertise in supply chain, connecting the world</p>
+    </div>
+    <p style="text-align:center;max-width:480px;margin:0 auto;font-size:14px;line-height:1.9;">
+      Everquick Supply-Chain Management (Guangdong) Co., Ltd., headquartered in Jiangmen, was founded in 2021 with a registered capital of RMB 5 million. We uphold the principles of "Efficiency, Reliability, and Transparency," providing end-to-end supply chain solutions for businesses.
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;">
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🎯</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">Client First</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🔒</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">Safe &amp; Reliable</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">🤝</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">Integrity</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
+        <div style="font-size:24px;margin-bottom:4px;">📈</div>
+        <div style="font-size:13px;font-weight:600;color:#1a202c;">Continuous Improvement</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="services">
+    <div class="section-title">
+      <h2>Core Services</h2>
+      <p>One-stop service capabilities covering the entire supply chain</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item">
+        <div class="svc-icon">🔍</div>
+        <div class="svc-text">
+          <h3>Procurement &amp; Supplier Management</h3>
+          <p>Global sourcing, supplier evaluation, contract negotiation, and quality control — reducing procurement costs by 15%+.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">🚚</div>
+        <div class="svc-text">
+          <h3>International Logistics</h3>
+          <p>Sea, air, and land multimodal transport with premium carrier resources for optimal speed and cost balance.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">🏭</div>
+        <div class="svc-text">
+          <h3>Warehousing &amp; Inventory</h3>
+          <p>Self-operated and partner warehouse network with WMS — inbound QC, sorting, packing, and drop shipping.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">📋</div>
+        <div class="svc-text">
+          <h3>Customs &amp; Compliance</h3>
+          <p>Professional customs brokerage: import/export clearance, HS classification, and AEO certification advisory.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">💰</div>
+        <div class="svc-text">
+          <h3>Supply Chain Finance</h3>
+          <p>Warehouse receipt financing, accounts receivable factoring, and L/C settlement to ease cash flow.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon">📊</div>
+        <div class="svc-text">
+          <h3>Supply Chain Digitalization</h3>
+          <p>Visibility platforms, OMS, TMS for real-time monitoring and data analytics across the supply chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>We look forward to connecting with you</p>
+    </div>
+    <div class="contact-row">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p>0086-13702274595</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p>tasmendeng@hotmail.com</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>Rm 602, No.19 Donghua 1st Rd, Jiangmen, Guangdong, China</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Everquick Supply-Chain Management (Guangdong) Co., Ltd.</p>
+    <p style="margin-top:8px;opacity:0.6;">&copy; 2026 All rights reserved.</p>
+    <a href="../en/index.html" class="switch-link">💻 Switch to Desktop Version</a>
+  </footer>
+
+</body>
+</html>
