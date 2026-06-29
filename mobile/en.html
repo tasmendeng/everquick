@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Everquick Supply-Chain Management — One-stop supply chain solutions.">
-  <title>Everquick Supply-Chain</title>
+  <meta name="description" content="Everquick Supply-Chain — Dried Seaweed Import Clearance specialist. Kappaphycus alvarezii one-stop customs clearance.">
+  <title>Everquick — Dried Seaweed Clearance</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -20,35 +20,56 @@
     .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
     .header-lang a.active{color:#3182ce;background:#edf2f7}
 
-    .section{padding:40px 20px}
+    .section{padding:36px 16px}
     .section-alt{background:#f7fafc}
-    .section-title{text-align:center;margin-bottom:28px}
-    .section-title h2{font-size:24px;color:#1a202c;margin-bottom:6px}
-    .section-title p{font-size:14px;color:#718096}
+    .section-title{text-align:center;margin-bottom:24px}
+    .section-title h2{font-size:22px;color:#1a202c;margin-bottom:6px}
+    .section-title p{font-size:13px;color:#718096}
 
-    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:48px 20px;text-align:center}
-    .hero h1{font-size:26px;font-weight:800;margin-bottom:10px}
-    .hero p{font-size:15px;opacity:0.85;margin-bottom:20px}
+    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:40px 16px;text-align:center}
+    .hero h1{font-size:24px;font-weight:800;margin-bottom:8px}
+    .hero p{font-size:14px;opacity:0.85;margin-bottom:18px}
     .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;transition:.2s}
+    .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:.2s;text-align:center}
     .btn-gold{background:#d69e2e;color:#fff}
-    .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)}
+    .btn-outline{background:transparent;color:#3182ce;border:1.5px solid #3182ce}
+    .btn-sm{font-size:12px;padding:5px 12px}
 
-    .svc-list{display:flex;flex-direction:column;gap:14px}
-    .svc-item{background:#fff;border-radius:10px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:14px;align-items:flex-start}
-    .svc-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;background:#edf2f7;border-radius:12px;display:flex;align-items:center;justify-content:center}
-    .svc-text h3{font-size:16px;color:#1a202c;margin-bottom:4px}
-    .svc-text p{font-size:13px;color:#718096}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .gallery-grid a{display:block;border-radius:8px;overflow:hidden}
+    .gallery-grid img{width:100%;height:140px;object-fit:cover}
 
-    .contact-row{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto}
-    .contact-card{display:flex;align-items:center;gap:14px;background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
-    .contact-card-icon{font-size:24px;width:42px;height:42px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .contact-card h4{font-size:14px;color:#1a202c}
-    .contact-card p{font-size:13px;color:#718096}
+    .doc-list{display:flex;flex-direction:column;gap:12px}
+    .doc-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
+    .doc-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .doc-text h3{font-size:15px;color:#1a202c;margin-bottom:3px}
+    .doc-text p{font-size:12px;color:#718096;margin-bottom:6px}
 
-    .footer{background:#1a202c;color:#cbd5e0;padding:32px 20px;text-align:center;font-size:13px}
+    .step-list{display:flex;flex-direction:column;gap:10px}
+    .step-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
+    .step-num{font-size:20px;font-weight:800;color:#3182ce;flex-shrink:0;width:36px;height:36px;background:#ebf8ff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .step-text h3{font-size:14px;color:#1a202c;margin-bottom:2px}
+    .step-text p{font-size:12px;color:#718096;margin-bottom:4px}
+
+    .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .value-item{text-align:center;padding:14px;background:#f7fafc;border-radius:8px}
+    .value-item .v-icon{font-size:22px;margin-bottom:4px}
+    .value-item .v-label{font-size:12px;font-weight:600;color:#1a202c}
+
+    .contact-row{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
+    .contact-card{display:flex;align-items:center;gap:12px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+    .contact-card-icon{font-size:22px;width:40px;height:40px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .contact-card h4{font-size:13px;color:#1a202c}
+    .contact-card p{font-size:12px;color:#718096}
+
+    .cta-section{background:linear-gradient(135deg,#3182ce,#1e3a5f);color:#fff;text-align:center;padding:40px 16px}
+    .cta-section h2{font-size:20px;margin-bottom:8px}
+    .cta-section p{font-size:13px;opacity:0.9;margin-bottom:18px}
+    .cta-section .btn-gold{font-size:14px;padding:12px 28px}
+
+    .footer{background:#1a202c;color:#cbd5e0;padding:28px 16px;text-align:center;font-size:12px}
     .footer a{color:#cbd5e0}
-    .switch-link{display:inline-block;margin-top:14px;padding:8px 18px;background:#2d3748;color:#fff;border-radius:20px;font-size:13px}
+    .switch-link{display:inline-block;margin-top:12px;padding:8px 16px;background:#2d3748;color:#fff;border-radius:20px;font-size:12px}
   </style>
   <script>
     (function(){
@@ -80,128 +101,194 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>Global Supply Chain<br>Efficient Management</h1>
-    <p>Everquick Supply-Chain Management — specializing in dried seaweed (Kappaphycus alvarezii) import clearance, providing one-stop solutions from origin to Nansha Port, Guangzhou.</p>
+    <h1>Dried Seaweed<br>Import Clearance</h1>
+    <p>Kappaphycus &amp; Cottonii — One-stop customs clearance from origin to Nansha Port, Guangzhou</p>
     <div class="hero-btns">
-      <a href="../en/dried-seaweed.html" class="btn btn-gold">Dried Seaweed Clearance</a>
-      <a href="#contact" class="btn btn-outline">Contact Us</a>
+      <a href="#docs" class="btn btn-gold">View Documents</a>
+      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Contact Us</a>
     </div>
   </section>
 
-  <section class="section" id="about">
+  <!-- Photo Gallery -->
+  <section class="section" id="gallery">
     <div class="section-title">
-      <h2>About Us</h2>
-      <p>Deep expertise in supply chain, connecting the world</p>
+      <h2>On-Site Operations</h2>
+      <p>Kappaphycus alvarezii cultivation, harvesting, sun-drying, packing, and transportation</p>
     </div>
-    <p style="text-align:center;max-width:480px;margin:0 auto;font-size:14px;line-height:1.9;">
-      Everquick Supply-Chain Management (Guangdong) Co., Ltd., headquartered in Jiangmen, was founded in 2021 with a registered capital of RMB 5 million. We uphold the principles of "Efficiency, Reliability, and Transparency," providing end-to-end supply chain solutions for businesses.
-    </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;">
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🎯</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">Client First</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🔒</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">Safe &amp; Reliable</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🤝</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">Integrity</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">📈</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">Continuous Improvement</div>
-      </div>
+    <div class="gallery-grid">
+      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank">
+        <img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt="On-site photo">
+      </a>
+      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank">
+        <img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt="On-site photo">
+      </a>
     </div>
   </section>
 
-  <section class="section section-alt" id="services">
+  <!-- Required Documents -->
+  <section class="section section-alt" id="docs">
     <div class="section-title">
-      <h2>Core Services</h2>
-      <p>One-stop service capabilities covering the entire supply chain</p>
+      <h2>Required Import Documents</h2>
+      <p>Essential documents with sample references — full review and agency service</p>
     </div>
-    <div class="svc-list">
-      <div class="svc-item" style="background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;">
-        <div class="svc-icon" style="background:rgba(255,255,255,0.15);">🌿</div>
-        <div class="svc-text">
-          <h3 style="color:#fff;">Dried Seaweed Import Clearance</h3>
-          <p style="color:rgba(255,255,255,0.8);">Kappaphycus / Cottonii — full-category import clearance from origin to Nansha Port, Guangzhou. Includes contract, invoice, packing list, certificate of origin, and full documentation review &amp; agency.</p>
+    <div class="doc-list">
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#fffaf0;">🧾</div>
+        <div class="doc-text">
+          <h3>Commercial Invoice</h3>
+          <p>Issued by the exporter, stating cargo value and country of origin — key basis for customs valuation.</p>
+          <a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🔍</div>
-        <div class="svc-text">
-          <h3>Procurement &amp; Supplier Management</h3>
-          <p>Global sourcing, supplier evaluation, contract negotiation, and quality control — reducing procurement costs by 15%+.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf4ff;">📄</div>
+        <div class="doc-text">
+          <h3>Sales Contract</h3>
+          <p>Official contract specifying product, quantity, unit price, trade terms (FOB/CIF), and payment.</p>
+          <a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 Page 1</a>
+          <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 Page 2</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🚚</div>
-        <div class="svc-text">
-          <h3>International Logistics</h3>
-          <p>Sea, air, and land multimodal transport with premium carrier resources for optimal speed and cost balance.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#f0fff4;">📦</div>
+        <div class="doc-text">
+          <h3>Packing List</h3>
+          <p>Net weight, gross weight, volume, packaging per unit — must match B/L and Invoice.</p>
+          <a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🏭</div>
-        <div class="svc-text">
-          <h3>Warehousing &amp; Inventory</h3>
-          <p>Self-operated and partner warehouse network with WMS — inbound QC, sorting, packing, and drop shipping.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#faf5ff;">🏷️</div>
+        <div class="doc-text">
+          <h3>Certificate of Origin</h3>
+          <p>Issued by exporting country — used to claim preferential tariff rates.</p>
+          <a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">📋</div>
-        <div class="svc-text">
-          <h3>Customs &amp; Compliance</h3>
-          <p>Professional customs brokerage: import/export clearance, HS classification, and AEO certification advisory.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#fff5f5;">🪪</div>
+        <div class="doc-text">
+          <h3>Export License</h3>
+          <p>Required by some source countries — we coordinate with suppliers for timely processing.</p>
+          <a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">💰</div>
-        <div class="svc-text">
-          <h3>Supply Chain Finance</h3>
-          <p>Warehouse receipt financing, accounts receivable factoring, and L/C settlement to ease cash flow.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf8ff;">🌿</div>
+        <div class="doc-text">
+          <h3>Phytosanitary Certificate</h3>
+          <p>Plant quarantine authority certifies freedom from harmful organisms — meets China entry requirements.</p>
+          <a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">📊</div>
-        <div class="svc-text">
-          <h3>Supply Chain Digitalization</h3>
-          <p>Visibility platforms, OMS, TMS for real-time monitoring and data analytics across the supply chain.</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf4ff;">🚢</div>
+        <div class="doc-text">
+          <h3>Bill of Lading</h3>
+          <p>Proof of ownership and cargo release basis — verified for consistency with L/C and documents.</p>
+          <a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Import Process -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Import Clearance Process</h2>
+      <p>Full visibility from origin to your warehouse in China</p>
+    </div>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Document Review</h3>
+          <p>Collect and review all documents 15 working days before arrival — identify issues in advance.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>International Shipping</h3>
+          <p>FCL/LCL ocean freight from origin directly to Nansha Port, Guangzhou with full cargo tracking.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Customs Declaration</h3>
+          <p>Upon arrival — customs declaration, inspection coordination, and duty/VAT payment.</p>
+          <a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 View Declaration Sample</a>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h3>Warehousing &amp; Delivery</h3>
+          <p>After clearance — trucking, warehousing with QC, or direct factory delivery for last-mile fulfillment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Everquick -->
+  <section class="section section-alt">
+    <div class="section-title">
+      <h2>Why Choose Everquick</h2>
+      <p>Years of hands-on experience in dried seaweed import</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-item"><div class="v-icon">🎯</div><div class="v-label">Full Variety Coverage</div></div>
+      <div class="value-item"><div class="v-icon">🤝</div><div class="v-label">Origin Direct Network</div></div>
+      <div class="value-item"><div class="v-icon">⏱️</div><div class="v-label">Fast Clearance</div></div>
+      <div class="value-item"><div class="v-icon">🔒</div><div class="v-label">Safe &amp; Reliable</div></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section class="section" id="contact">
     <div class="section-title">
       <h2>Contact Us</h2>
-      <p>We look forward to connecting with you</p>
+      <p>Tell us your origin, variety, and volume — we'll provide a complete clearance plan</p>
     </div>
     <div class="contact-row">
       <div class="contact-card">
         <div class="contact-card-icon">📞</div>
-        <div>
-          <h4>Phone</h4>
-          <p>0086-13702274595</p>
-        </div>
+        <div><h4>Phone</h4><p>0086-13702274595</p></div>
       </div>
       <div class="contact-card">
         <div class="contact-card-icon">✉️</div>
-        <div>
-          <h4>Email</h4>
-          <p>tasmendeng@hotmail.com</p>
-        </div>
+        <div><h4>Email</h4><p>tasmendeng@hotmail.com</p></div>
       </div>
       <div class="contact-card">
         <div class="contact-card-icon">📍</div>
-        <div>
-          <h4>Address</h4>
-          <p>Rm 602, No.19 Donghua 1st Rd, Jiangmen, Guangdong, China</p>
-        </div>
+        <div><h4>Address</h4><p>Rm 602, No.19 Donghua 1st Rd, Jiangmen, Guangdong, China</p></div>
       </div>
     </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Need dried seaweed import services?</h2>
+    <p>Get a complete import clearance plan and cost estimate</p>
+    <a href="tel:0086-13702274595" class="btn btn-gold">📞 Call for Consultation</a>
   </section>
 
   <footer class="footer">

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="广东恒讯供应链管理有限公司手机版 — 一站式供应链管理服务商。">
-  <title>恒讯供应链</title>
+  <meta name="description" content="广东恒讯供应链 — 干海藻进口清关专家，长心卡帕藻全品类一站式通关。">
+  <title>恒讯供应链 — 干海藻进口清关</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -13,7 +13,6 @@
     a{color:#3182ce;text-decoration:none}
     ul{list-style:none}
 
-    /* 顶部导航 */
     .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
     .header-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
     .header-logo img{height:44px;width:auto}
@@ -21,40 +20,56 @@
     .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
     .header-lang a.active{color:#3182ce;background:#edf2f7}
 
-    /* 版块 */
-    .section{padding:40px 20px}
+    .section{padding:36px 16px}
     .section-alt{background:#f7fafc}
-    .section-title{text-align:center;margin-bottom:28px}
-    .section-title h2{font-size:24px;color:#1a202c;margin-bottom:6px}
-    .section-title p{font-size:14px;color:#718096}
+    .section-title{text-align:center;margin-bottom:24px}
+    .section-title h2{font-size:22px;color:#1a202c;margin-bottom:6px}
+    .section-title p{font-size:13px;color:#718096}
 
-    /* Hero */
-    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:48px 20px;text-align:center}
-    .hero h1{font-size:26px;font-weight:800;margin-bottom:10px}
-    .hero p{font-size:15px;opacity:0.85;margin-bottom:20px}
+    .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:40px 16px;text-align:center}
+    .hero h1{font-size:24px;font-weight:800;margin-bottom:8px}
+    .hero p{font-size:14px;opacity:0.85;margin-bottom:18px}
     .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;transition:.2s}
+    .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:.2s;text-align:center}
     .btn-gold{background:#d69e2e;color:#fff}
-    .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)}
+    .btn-outline{background:transparent;color:#3182ce;border:1.5px solid #3182ce}
+    .btn-sm{font-size:12px;padding:5px 12px}
 
-    /* 服务 */
-    .svc-list{display:flex;flex-direction:column;gap:14px}
-    .svc-item{background:#fff;border-radius:10px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:14px;align-items:flex-start}
-    .svc-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;background:#edf2f7;border-radius:12px;display:flex;align-items:center;justify-content:center}
-    .svc-text h3{font-size:16px;color:#1a202c;margin-bottom:4px}
-    .svc-text p{font-size:13px;color:#718096}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .gallery-grid a{display:block;border-radius:8px;overflow:hidden}
+    .gallery-grid img{width:100%;height:140px;object-fit:cover}
 
-    /* 联系 */
-    .contact-row{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto}
-    .contact-card{display:flex;align-items:center;gap:14px;background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
-    .contact-card-icon{font-size:24px;width:42px;height:42px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .contact-card h4{font-size:14px;color:#1a202c}
-    .contact-card p{font-size:13px;color:#718096}
+    .doc-list{display:flex;flex-direction:column;gap:12px}
+    .doc-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
+    .doc-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .doc-text h3{font-size:15px;color:#1a202c;margin-bottom:3px}
+    .doc-text p{font-size:12px;color:#718096;margin-bottom:6px}
 
-    /* 页脚 */
-    .footer{background:#1a202c;color:#cbd5e0;padding:32px 20px;text-align:center;font-size:13px}
+    .step-list{display:flex;flex-direction:column;gap:10px}
+    .step-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
+    .step-num{font-size:20px;font-weight:800;color:#3182ce;flex-shrink:0;width:36px;height:36px;background:#ebf8ff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .step-text h3{font-size:14px;color:#1a202c;margin-bottom:2px}
+    .step-text p{font-size:12px;color:#718096;margin-bottom:4px}
+
+    .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .value-item{text-align:center;padding:14px;background:#f7fafc;border-radius:8px}
+    .value-item .v-icon{font-size:22px;margin-bottom:4px}
+    .value-item .v-label{font-size:12px;font-weight:600;color:#1a202c}
+
+    .contact-row{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
+    .contact-card{display:flex;align-items:center;gap:12px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+    .contact-card-icon{font-size:22px;width:40px;height:40px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .contact-card h4{font-size:13px;color:#1a202c}
+    .contact-card p{font-size:12px;color:#718096}
+
+    .cta-section{background:linear-gradient(135deg,#3182ce,#1e3a5f);color:#fff;text-align:center;padding:40px 16px}
+    .cta-section h2{font-size:20px;margin-bottom:8px}
+    .cta-section p{font-size:13px;opacity:0.9;margin-bottom:18px}
+    .cta-section .btn-gold{font-size:14px;padding:12px 28px}
+
+    .footer{background:#1a202c;color:#cbd5e0;padding:28px 16px;text-align:center;font-size:12px}
     .footer a{color:#cbd5e0}
-    .switch-link{display:inline-block;margin-top:14px;padding:8px 18px;background:#2d3748;color:#fff;border-radius:20px;font-size:13px}
+    .switch-link{display:inline-block;margin-top:12px;padding:8px 16px;background:#2d3748;color:#fff;border-radius:20px;font-size:12px}
   </style>
   <script>
     (function(){
@@ -86,128 +101,194 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>全球供应链<br>高效管理</h1>
-    <p>广东恒讯供应链管理有限公司，专注干海藻（长心卡帕藻）进口清关，提供从产地到广州南沙港的一站式供应链解决方案。</p>
+    <h1>干海藻进口清关</h1>
+    <p>麒麟菜 / Cottonii 全品类 — 从产地直达广州南沙港，一站式通关解决方案</p>
     <div class="hero-btns">
-      <a href="../cn/dried-seaweed.html" class="btn btn-gold">干海藻进口清关</a>
-      <a href="#contact" class="btn btn-outline">联系我们</a>
+      <a href="#docs" class="btn btn-gold">查看单证清单</a>
+      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">联系我们</a>
     </div>
   </section>
 
-  <section class="section" id="about">
+  <!-- 实地操作现场 -->
+  <section class="section" id="gallery">
     <div class="section-title">
-      <h2>关于我们</h2>
-      <p>深耕供应链，链接全球，服务中国</p>
+      <h2>实地操作现场</h2>
+      <p>长心卡帕藻种植、采集、日晒、打包、运送等环节的实地照片</p>
     </div>
-    <p style="text-align:center;max-width:480px;margin:0 auto;font-size:14px;line-height:1.9;">
-      广东恒讯供应链管理有限公司（Everquick Supply-Chain Management）总部位于江门，成立于2021年，注册资本500万元。公司以"高效、可靠、透明"为服务理念，业务涵盖供应链管理、国际货运代理、普通货物仓储、国内贸易代理等领域。
-    </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;">
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🎯</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">客户至上</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🔒</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">安全可靠</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">🤝</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">诚信为本</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#f7fafc;border-radius:8px;">
-        <div style="font-size:24px;margin-bottom:4px;">📈</div>
-        <div style="font-size:13px;font-weight:600;color:#1a202c;">持续优化</div>
-      </div>
+    <div class="gallery-grid">
+      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank">
+        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank">
+        <img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt="实地照片">
+      </a>
+      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank">
+        <img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt="实地照片">
+      </a>
     </div>
   </section>
 
-  <section class="section section-alt" id="services">
+  <!-- 进口所需单证 -->
+  <section class="section section-alt" id="docs">
     <div class="section-title">
-      <h2>核心服务</h2>
-      <p>覆盖供应链全链路的一站式服务能力</p>
+      <h2>进口所需单证</h2>
+      <p>核心单证及样本参考，我们提供全程审核与代办服务</p>
     </div>
-    <div class="svc-list">
-      <div class="svc-item" style="background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;">
-        <div class="svc-icon" style="background:rgba(255,255,255,0.15);">🌿</div>
-        <div class="svc-text">
-          <h3 style="color:#fff;">干海藻进口清关</h3>
-          <p style="color:rgba(255,255,255,0.8);">麒麟菜 / Cottonii 全品类，从产地直达广州南沙港，一站式通关方案。涵盖合同、发票、装箱单、产地证等全套单证审核代办。</p>
+    <div class="doc-list">
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#fffaf0;">🧾</div>
+        <div class="doc-text">
+          <h3>商业发票</h3>
+          <p>出口商出具的发票，载明货物价值、原产国，是海关核定完税价格的核心依据。</p>
+          <a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🔍</div>
-        <div class="svc-text">
-          <h3>采购与供应商管理</h3>
-          <p>全球寻源、供应商评估、合同谈判、品质管控，降低采购成本15%以上。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf4ff;">📄</div>
+        <div class="doc-text">
+          <h3>贸易合同</h3>
+          <p>买卖双方签署的正式合同，明确品名、数量、单价、贸易术语、付款方式等。</p>
+          <a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 第1页</a>
+          <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 第2页</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🚚</div>
-        <div class="svc-text">
-          <h3>国际物流运输</h3>
-          <p>海运、空运、陆运多式联运，整合优质运力，保证时效与成本最优平衡。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#f0fff4;">📦</div>
+        <div class="doc-text">
+          <h3>装箱单</h3>
+          <p>详细列明每件包装的净重、毛重、体积、包装方式等，须与提单、发票一致。</p>
+          <a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">🏭</div>
-        <div class="svc-text">
-          <h3>仓储与库存管理</h3>
-          <p>自营+合作仓储网络，WMS智能管理，入库质检、分拣打包、一件代发。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#faf5ff;">🏷️</div>
+        <div class="doc-text">
+          <h3>原产地证</h3>
+          <p>出口国官方签发的原产地证书，用于享受关税优惠协定税率。</p>
+          <a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">📋</div>
-        <div class="svc-text">
-          <h3>关务与合规咨询</h3>
-          <p>专业报关报检，进出口清关、HS编码归类、AEO认证辅导，贸易畅通无阻。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#fff5f5;">🪪</div>
+        <div class="doc-text">
+          <h3>出口许可证</h3>
+          <p>部分原产国要求干海藻出口须取得政府部门颁发的出口许可证。</p>
+          <a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">💰</div>
-        <div class="svc-text">
-          <h3>供应链金融</h3>
-          <p>仓单质押、应收账款融资、信用证结算，帮助企业缓解资金压力。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf8ff;">🌿</div>
+        <div class="doc-text">
+          <h3>植物检疫证书</h3>
+          <p>出口国官方检疫机构出具，证明货物不含有害生物，符合中国入境检疫要求。</p>
+          <a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
-      <div class="svc-item">
-        <div class="svc-icon">📊</div>
-        <div class="svc-text">
-          <h3>供应链数字化</h3>
-          <p>可视化平台、OMS、TMS系统，全链路实时监控与数据分析。</p>
+      <div class="doc-item">
+        <div class="doc-icon" style="background:#ebf4ff;">🚢</div>
+        <div class="doc-text">
+          <h3>海运提单</h3>
+          <p>船公司签发的货权凭证和提货依据，须与信用证及其他单证一致。</p>
+          <a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 进口清关流程 -->
+  <section class="section">
+    <div class="section-title">
+      <h2>进口清关流程</h2>
+      <p>从海外产地到中国仓库，全程可视化管控</p>
+    </div>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>单证预审</h3>
+          <p>收货前15个工作日，收集并审核全套进口单证，提前排查问题。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>国际运输</h3>
+          <p>海运整柜/拼柜，从产地港口直达广州南沙港（广东主要进口口岸），全程货物跟踪。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>报关报检</h3>
+          <p>货物到港后，向海关申报、配合查验、缴纳关税及增值税。</p>
+          <a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 查看报关单样本</a>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h3>仓储配送</h3>
+          <p>清关完成后安排拖车提货，入仓质检或直接配送，完成最后一公里交付。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 为什么选择恒讯 -->
+  <section class="section section-alt">
+    <div class="section-title">
+      <h2>为什么选择恒讯</h2>
+      <p>深耕干海藻进口领域，多年实操经验为您保驾护航</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-item"><div class="v-icon">🎯</div><div class="v-label">品种全覆盖</div></div>
+      <div class="value-item"><div class="v-icon">🤝</div><div class="v-label">产地直达网络</div></div>
+      <div class="value-item"><div class="v-icon">⏱️</div><div class="v-label">快速通关承诺</div></div>
+      <div class="value-item"><div class="v-icon">🔒</div><div class="v-label">安全可靠</div></div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
   <section class="section" id="contact">
     <div class="section-title">
       <h2>联系我们</h2>
-      <p>期待与您交流，共同探索供应链优化的更多可能</p>
+      <p>告诉我们您的采购产地、品种和数量，获取完整的进口清关方案</p>
     </div>
     <div class="contact-row">
       <div class="contact-card">
         <div class="contact-card-icon">📞</div>
-        <div>
-          <h4>电话</h4>
-          <p>0086-13702274595</p>
-        </div>
+        <div><h4>电话</h4><p>0086-13702274595</p></div>
       </div>
       <div class="contact-card">
         <div class="contact-card-icon">✉️</div>
-        <div>
-          <h4>邮箱</h4>
-          <p>tasmendeng@hotmail.com</p>
-        </div>
+        <div><h4>邮箱</h4><p>tasmendeng@hotmail.com</p></div>
       </div>
       <div class="contact-card">
         <div class="contact-card-icon">📍</div>
-        <div>
-          <h4>地址</h4>
-          <p>中国广东省江门市东华一路19号602室</p>
-        </div>
+        <div><h4>地址</h4><p>中国广东省江门市东华一路19号602室</p></div>
       </div>
     </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>有干海藻进口需求？</h2>
+    <p>为您提供完整的进口清关方案和费用估算</p>
+    <a href="tel:0086-13702274595" class="btn btn-gold">📞 立即致电咨询</a>
   </section>
 
   <footer class="footer">
