@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <title>恒讯供应链 — 微信名片</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif;
+      display:flex;justify-content:center;align-items:center;
+      min-height:100vh;
+      background:#e8ecf1;
+    }
+    .card{
+      width:680px;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 12px 48px rgba(0,0,0,0.15);
+    }
+    /* Header */
+    .card-header{
+      background:linear-gradient(135deg,#1e3a5f 0%,#2a4a6b 100%);
+      color:#fff;
+      padding:32px 36px 28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card-header::after{
+      content:'';
+      position:absolute;
+      top:-60px;right:-60px;
+      width:200px;height:200px;
+      background:rgba(255,255,255,0.03);
+      border-radius:50%;
+    }
+    .card-header .brand{
+      display:flex;align-items:center;gap:14px;
+      position:relative;z-index:1;
+    }
+    .card-header .brand img{
+      height:56px;width:auto;
+      border-radius:6px;
+    }
+    .card-header .brand-text h2{
+      font-size:22px;font-weight:700;
+      letter-spacing:1px;
+      margin-bottom:4px;
+    }
+    .card-header .brand-text p{
+      font-size:12px;opacity:0.7;
+      letter-spacing:0.5px;
+    }
+    .card-header .tagline{
+      margin-top:16px;
+      font-size:13px;opacity:0.8;
+      position:relative;z-index:1;
+      letter-spacing:0.5px;
+    }
+
+    /* Body */
+    .card-body{
+      padding:0 36px;
+    }
+    .profile{
+      display:flex;align-items:center;
+      padding:28px 0;
+      border-bottom:1px solid #f0f0f0;
+    }
+    .avatar{
+      width:72px;height:72px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#d69e2e,#b7791f);
+      display:flex;align-items:center;justify-content:center;
+      font-size:30px;color:#fff;font-weight:700;
+      flex-shrink:0;
+      margin-right:18px;
+    }
+    .info h1{
+      font-size:26px;color:#1a202c;
+      margin-bottom:4px;
+      font-weight:700;
+    }
+    .info .title{
+      display:inline-block;
+      color:#1e3a5f;
+      font-size:14px;font-weight:500;
+      background:#edf2f7;
+      padding:3px 12px;border-radius:4px;
+    }
+
+    /* QR + contact */
+    .contact-section{
+      display:flex;gap:30px;
+      padding:24px 0 32px;
+    }
+    .contact-left{
+      flex:1;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    .contact-item{
+      display:flex;align-items:center;gap:10px;
+      font-size:14px;color:#4a5568;
+    }
+    .contact-item .icon{
+      width:34px;height:34px;
+      background:#f7fafc;
+      border-radius:8px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:16px;flex-shrink:0;
+    }
+    .contact-item .val{
+      color:#2d3748;font-weight:500;
+    }
+    .qr-section{
+      text-align:center;
+      flex-shrink:0;
+    }
+    .qr-section img{
+      width:130px;height:130px;
+      border-radius:8px;
+      border:3px solid #f0f0f0;
+    }
+    .qr-section p{
+      font-size:11px;color:#a0aec0;margin-top:6px;
+    }
+
+    /* Footer */
+    .card-footer{
+      background:#f7fafc;
+      padding:18px 36px;
+      text-align:center;
+      font-size:12px;color:#a0aec0;
+      letter-spacing:0.5px;
+    }
+    .card-footer strong{
+      color:#d69e2e;font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <!-- Header -->
+  <div class="card-header">
+    <div class="brand">
+      <img src="../images/logo.jpg" alt="Everquick">
+      <div class="brand-text">
+        <h2>广东恒讯供应链管理有限公司</h2>
+        <p>Everquick Supply-Chain Management (Guangdong) Co., Ltd.</p>
+      </div>
+    </div>
+    <div class="tagline">🌿 专注干海藻（长心卡帕藻）进口清关 · 产地直达广州南沙港</div>
+  </div>
+
+  <!-- Profile -->
+  <div class="card-body">
+    <div class="profile">
+      <div class="avatar">邓</div>
+      <div class="info">
+        <h1>邓毅辉</h1>
+        <span class="title">经理</span>
+      </div>
+    </div>
+
+    <!-- Contact + QR -->
+    <div class="contact-section">
+      <div class="contact-left">
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <div>
+            <div style="font-size:11px;color:#a0aec0;">手机</div>
+            <div class="val">0086-13702274595</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <div>
+            <div style="font-size:11px;color:#a0aec0;">邮箱</div>
+            <div class="val">tasmendeng@hotmail.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div>
+            <div style="font-size:11px;color:#a0aec0;">地址</div>
+            <div class="val" style="font-size:13px;">中国广东省江门市东华一路19号602室</div>
+          </div>
+        </div>
+      </div>
+      <div class="qr-section">
+        <img src="qr.jpg" alt="微信二维码">
+        <p>微信扫一扫 添加好友</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="card-footer">
+    麒麟菜 / Cottonii 全品类 · 进口单证审核代办 · 海运清关一站式方案<br>
+    <strong>让每一件货物都高效流转</strong>
+  </div>
+</div>
+
+</body>
+</html>
