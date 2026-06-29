@@ -3,29 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="广东恒讯供应链 — 干海藻进口清关专家，长心卡帕藻全品类一站式通关。">
-  <title>恒讯供应链 — 干海藻进口清关</title>
+  <meta name="description" content="广东恒讯供应链 — 全球采购、国际物流、干海藻进口清关一站式服务。">
+  <title>恒讯供应链</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px}
     img{max-width:100%;display:block}
     a{color:#3182ce;text-decoration:none}
     ul{list-style:none}
-
     .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-    .header-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .header-logo{display:flex;align-items:center;gap:8px}
     .header-logo img{height:44px;width:auto}
     .header-lang{display:flex;gap:4px;font-size:13px;font-weight:500}
     .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
     .header-lang a.active{color:#3182ce;background:#edf2f7}
-
     .section{padding:36px 16px}
     .section-alt{background:#f7fafc}
     .section-title{text-align:center;margin-bottom:24px}
     .section-title h2{font-size:22px;color:#1a202c;margin-bottom:6px}
     .section-title p{font-size:13px;color:#718096}
-
     .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:40px 16px;text-align:center}
     .hero h1{font-size:24px;font-weight:800;margin-bottom:8px}
     .hero p{font-size:14px;opacity:0.85;margin-bottom:18px}
@@ -34,39 +31,37 @@
     .btn-gold{background:#d69e2e;color:#fff}
     .btn-outline{background:transparent;color:#3182ce;border:1.5px solid #3182ce}
     .btn-sm{font-size:12px;padding:5px 12px}
-
+    .cat-cards{display:flex;flex-direction:column;gap:12px}
+    .cat-card{display:flex;align-items:center;gap:14px;padding:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;color:inherit;transition:transform .2s}
+    .cat-card .cat-icon{font-size:32px;flex-shrink:0;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+    .cat-card .cat-text h3{font-size:17px;color:#1a202c;margin-bottom:2px}
+    .cat-card .cat-text p{font-size:12px;color:#718096}
     .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
     .gallery-grid a{display:block;border-radius:8px;overflow:hidden}
     .gallery-grid img{width:100%;height:140px;object-fit:cover}
-
     .doc-list{display:flex;flex-direction:column;gap:12px}
     .doc-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
     .doc-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center}
     .doc-text h3{font-size:15px;color:#1a202c;margin-bottom:3px}
     .doc-text p{font-size:12px;color:#718096;margin-bottom:6px}
-
     .step-list{display:flex;flex-direction:column;gap:10px}
     .step-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
     .step-num{font-size:20px;font-weight:800;color:#3182ce;flex-shrink:0;width:36px;height:36px;background:#ebf8ff;border-radius:50%;display:flex;align-items:center;justify-content:center}
     .step-text h3{font-size:14px;color:#1a202c;margin-bottom:2px}
     .step-text p{font-size:12px;color:#718096;margin-bottom:4px}
-
     .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     .value-item{text-align:center;padding:14px;background:#f7fafc;border-radius:8px}
     .value-item .v-icon{font-size:22px;margin-bottom:4px}
     .value-item .v-label{font-size:12px;font-weight:600;color:#1a202c}
-
     .contact-row{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
     .contact-card{display:flex;align-items:center;gap:12px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
     .contact-card-icon{font-size:22px;width:40px;height:40px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .contact-card h4{font-size:13px;color:#1a202c}
     .contact-card p{font-size:12px;color:#718096}
-
     .cta-section{background:linear-gradient(135deg,#3182ce,#1e3a5f);color:#fff;text-align:center;padding:40px 16px}
     .cta-section h2{font-size:20px;margin-bottom:8px}
     .cta-section p{font-size:13px;opacity:0.9;margin-bottom:18px}
     .cta-section .btn-gold{font-size:14px;padding:12px 28px}
-
     .footer{background:#1a202c;color:#cbd5e0;padding:28px 16px;text-align:center;font-size:12px}
     .footer a{color:#cbd5e0}
     .switch-link{display:inline-block;margin-top:12px;padding:8px 16px;background:#2d3748;color:#fff;border-radius:20px;font-size:12px}
@@ -101,192 +96,126 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>干海藻进口清关</h1>
-    <p>麒麟菜 / Cottonii 全品类 — 从产地直达广州南沙港，一站式通关解决方案</p>
+    <h1>全球供应链<br>高效管理</h1>
+    <p>广东恒讯供应链管理有限公司，专注全球采购与国际物流，提供一站式供应链解决方案。</p>
     <div class="hero-btns">
-      <a href="#docs" class="btn btn-gold">查看单证清单</a>
-      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">联系我们</a>
+      <a href="global-sourcing.html" class="btn btn-gold">全球采购</a>
+      <a href="#services" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">国际物流</a>
     </div>
   </section>
 
-  <!-- 实地操作现场 -->
-  <section class="section" id="gallery">
+  <!-- 全球采购 3 类目 -->
+  <section class="section" id="sourcing">
     <div class="section-title">
-      <h2>实地操作现场</h2>
-      <p>长心卡帕藻种植、采集、日晒、打包、运送等环节的实地照片</p>
+      <h2>全球采购</h2>
+      <p>优质原料 · 产地直采 · 一站式进口</p>
     </div>
+    <div class="cat-cards">
+      <a href="#seaweed" class="cat-card" style="background:linear-gradient(135deg,#ebf8ff,#bee3f8);">
+        <div class="cat-icon" style="background:#3182ce;color:#fff;">🌿</div>
+        <div class="cat-text">
+          <h3>干海藻</h3>
+          <p>麒麟菜 / Cottonii 全品类进口清关</p>
+        </div>
+      </a>
+      <a href="#shells" class="cat-card" style="background:linear-gradient(135deg,#fefcbf,#faf5ff);">
+        <div class="cat-icon" style="background:#d69e2e;color:#fff;">🐚</div>
+        <div class="cat-text">
+          <h3>贝壳</h3>
+          <p>天然贝壳 · 工艺品/建材/饲料原料</p>
+        </div>
+      </a>
+      <a href="#cocoa" class="cat-card" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);">
+        <div class="cat-icon" style="background:#e53e3e;color:#fff;">🍫</div>
+        <div class="cat-text">
+          <h3>可可豆</h3>
+          <p>优质产区精选 · 食品加工原料</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 干海藻详细内容 -->
+  <section class="section section-alt" id="seaweed">
+    <div class="section-title">
+      <h2>🌿 干海藻进口清关</h2>
+      <p>麒麟菜 / Cottonii — 从产地直达广州南沙港</p>
+    </div>
+
+    <div class="section-title" style="margin-top:24px;"><h2>实地操作现场</h2><p>长心卡帕藻种植、采集、日晒、打包、运送</p></div>
     <div class="gallery-grid">
-      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank">
-        <img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt="实地照片">
-      </a>
-      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank">
-        <img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt="实地照片">
-      </a>
+      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt=""></a>
+      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank"><img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt=""></a>
+      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank"><img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt=""></a>
     </div>
-  </section>
 
-  <!-- 进口所需单证 -->
-  <section class="section section-alt" id="docs">
-    <div class="section-title">
-      <h2>进口所需单证</h2>
-      <p>核心单证及样本参考，我们提供全程审核与代办服务</p>
-    </div>
+    <div class="section-title" style="margin-top:32px;"><h2>进口所需单证</h2><p>全程审核与代办服务</p></div>
     <div class="doc-list">
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#fffaf0;">🧾</div>
-        <div class="doc-text">
-          <h3>商业发票</h3>
-          <p>出口商出具的发票，载明货物价值、原产国，是海关核定完税价格的核心依据。</p>
-          <a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf4ff;">📄</div>
-        <div class="doc-text">
-          <h3>贸易合同</h3>
-          <p>买卖双方签署的正式合同，明确品名、数量、单价、贸易术语、付款方式等。</p>
-          <a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 第1页</a>
-          <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 第2页</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#f0fff4;">📦</div>
-        <div class="doc-text">
-          <h3>装箱单</h3>
-          <p>详细列明每件包装的净重、毛重、体积、包装方式等，须与提单、发票一致。</p>
-          <a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#faf5ff;">🏷️</div>
-        <div class="doc-text">
-          <h3>原产地证</h3>
-          <p>出口国官方签发的原产地证书，用于享受关税优惠协定税率。</p>
-          <a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#fff5f5;">🪪</div>
-        <div class="doc-text">
-          <h3>出口许可证</h3>
-          <p>部分原产国要求干海藻出口须取得政府部门颁发的出口许可证。</p>
-          <a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf8ff;">🌿</div>
-        <div class="doc-text">
-          <h3>植物检疫证书</h3>
-          <p>出口国官方检疫机构出具，证明货物不含有害生物，符合中国入境检疫要求。</p>
-          <a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf4ff;">🚢</div>
-        <div class="doc-text">
-          <h3>海运提单</h3>
-          <p>船公司签发的货权凭证和提货依据，须与信用证及其他单证一致。</p>
-          <a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 查看样本</a>
-        </div>
-      </div>
+      <div class="doc-item"><div class="doc-icon" style="background:#fffaf0;">🧾</div><div class="doc-text"><h3>商业发票</h3><p>海关核定完税价格的核心依据。</p><a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf4ff;">📄</div><div class="doc-text"><h3>贸易合同</h3><p>明确品名、数量、单价、贸易术语等。</p><a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 第1页</a> <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 第2页</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#f0fff4;">📦</div><div class="doc-text"><h3>装箱单</h3><p>净重、毛重、体积、包装方式等明细。</p><a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#faf5ff;">🏷️</div><div class="doc-text"><h3>原产地证</h3><p>用于享受关税优惠协定税率。</p><a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#fff5f5;">🪪</div><div class="doc-text"><h3>出口许可证</h3><p>部分原产国要求出口许可。</p><a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf8ff;">🌿</div><div class="doc-text"><h3>植物检疫证书</h3><p>证明不含有害生物，符合入境检疫。</p><a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf4ff;">🚢</div><div class="doc-text"><h3>海运提单</h3><p>货权凭证和提货依据。</p><a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 样本</a></div></div>
     </div>
-  </section>
 
-  <!-- 进口清关流程 -->
-  <section class="section">
-    <div class="section-title">
-      <h2>进口清关流程</h2>
-      <p>从海外产地到中国仓库，全程可视化管控</p>
-    </div>
+    <div class="section-title" style="margin-top:32px;"><h2>进口清关流程</h2></div>
     <div class="step-list">
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <h3>单证预审</h3>
-          <p>收货前15个工作日，收集并审核全套进口单证，提前排查问题。</p>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <h3>国际运输</h3>
-          <p>海运整柜/拼柜，从产地港口直达广州南沙港（广东主要进口口岸），全程货物跟踪。</p>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <h3>报关报检</h3>
-          <p>货物到港后，向海关申报、配合查验、缴纳关税及增值税。</p>
-          <a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 查看报关单样本</a>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <h3>仓储配送</h3>
-          <p>清关完成后安排拖车提货，入仓质检或直接配送，完成最后一公里交付。</p>
-        </div>
-      </div>
+      <div class="step-item"><div class="step-num">1</div><div class="step-text"><h3>单证预审</h3><p>收货前15个工作日收集审核全套单证。</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-text"><h3>国际运输</h3><p>海运整柜/拼柜直达广州南沙港。</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-text"><h3>报关报检</h3><p>海关申报、查验、缴纳关税及增值税。<br><a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 报关单样本</a></p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-text"><h3>仓储配送</h3><p>拖车提货，入仓质检或直接配送。</p></div></div>
     </div>
   </section>
 
-  <!-- 为什么选择恒讯 -->
-  <section class="section section-alt">
-    <div class="section-title">
-      <h2>为什么选择恒讯</h2>
-      <p>深耕干海藻进口领域，多年实操经验为您保驾护航</p>
+  <!-- 贝壳 -->
+  <section class="section" id="shells">
+    <div class="section-title"><h2>🐚 贝壳</h2><p>精选天然贝壳原料</p></div>
+    <div class="gallery-grid">
+      <a href="../images/sourcing/shells/01.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/01.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/02.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/02.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/03.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/03.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/04.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/04.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/05.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/05.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/06.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/06.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/07.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/07.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/08.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/08.jpg" alt="贝壳"></a>
+      <a href="../images/sourcing/shells/09.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/09.jpg" alt="贝壳"></a>
     </div>
-    <div class="values-grid">
-      <div class="value-item"><div class="v-icon">🎯</div><div class="v-label">品种全覆盖</div></div>
-      <div class="value-item"><div class="v-icon">🤝</div><div class="v-label">产地直达网络</div></div>
-      <div class="value-item"><div class="v-icon">⏱️</div><div class="v-label">快速通关承诺</div></div>
-      <div class="value-item"><div class="v-icon">🔒</div><div class="v-label">安全可靠</div></div>
+  </section>
+
+  <!-- 可可豆 -->
+  <section class="section section-alt" id="cocoa">
+    <div class="section-title"><h2>🍫 可可豆</h2><p>源自优质产区精选可可豆</p></div>
+    <div class="gallery-grid">
+      <a href="../images/sourcing/cocoa/01.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/01.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/02.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/02.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/03.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/03.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/04.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/04.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/05.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/05.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/06.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/06.jpg" alt="可可豆"></a>
+      <a href="../images/sourcing/cocoa/07.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/07.jpg" alt="可可豆"></a>
     </div>
   </section>
 
   <!-- 联系我们 -->
   <section class="section" id="contact">
-    <div class="section-title">
-      <h2>联系我们</h2>
-      <p>告诉我们您的采购产地、品种和数量，获取完整的进口清关方案</p>
-    </div>
+    <div class="section-title"><h2>联系我们</h2><p>获取完整的进口清关方案</p></div>
     <div class="contact-row">
-      <div class="contact-card">
-        <div class="contact-card-icon">📞</div>
-        <div><h4>电话</h4><p>0086-13702274595</p></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">✉️</div>
-        <div><h4>邮箱</h4><p>tasmendeng@hotmail.com</p></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">📍</div>
-        <div><h4>地址</h4><p>中国广东省江门市东华一路19号602室</p></div>
-      </div>
+      <div class="contact-card"><div class="contact-card-icon">📞</div><div><h4>电话</h4><p>0086-13702274595</p></div></div>
+      <div class="contact-card"><div class="contact-card-icon">✉️</div><div><h4>邮箱</h4><p>tasmendeng@hotmail.com</p></div></div>
+      <div class="contact-card"><div class="contact-card-icon">📍</div><div><h4>地址</h4><p>广东省江门市东华一路19号602室</p></div></div>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>有干海藻进口需求？</h2>
+    <h2>有进口采购需求？</h2>
     <p>为您提供完整的进口清关方案和费用估算</p>
     <a href="tel:0086-13702274595" class="btn btn-gold">📞 立即致电咨询</a>
   </section>

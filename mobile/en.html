@@ -3,29 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Everquick Supply-Chain — Dried Seaweed Import Clearance specialist. Kappaphycus alvarezii one-stop customs clearance.">
-  <title>Everquick — Dried Seaweed Clearance</title>
+  <meta name="description" content="Everquick Supply-Chain — Global Sourcing, International Logistics, Dried Seaweed Import Clearance.">
+  <title>Everquick Supply-Chain</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#4a5568;background:#fff;line-height:1.7;font-size:15px}
     img{max-width:100%;display:block}
     a{color:#3182ce;text-decoration:none}
     ul{list-style:none}
-
     .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-    .header-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .header-logo{display:flex;align-items:center;gap:8px}
     .header-logo img{height:44px;width:auto}
     .header-lang{display:flex;gap:4px;font-size:13px;font-weight:500}
     .header-lang a{padding:4px 8px;border-radius:4px;color:#718096}
     .header-lang a.active{color:#3182ce;background:#edf2f7}
-
     .section{padding:36px 16px}
     .section-alt{background:#f7fafc}
     .section-title{text-align:center;margin-bottom:24px}
     .section-title h2{font-size:22px;color:#1a202c;margin-bottom:6px}
     .section-title p{font-size:13px;color:#718096}
-
     .hero{background:linear-gradient(135deg,#1e3a5f,#2a4a6b);color:#fff;padding:40px 16px;text-align:center}
     .hero h1{font-size:24px;font-weight:800;margin-bottom:8px}
     .hero p{font-size:14px;opacity:0.85;margin-bottom:18px}
@@ -34,39 +31,37 @@
     .btn-gold{background:#d69e2e;color:#fff}
     .btn-outline{background:transparent;color:#3182ce;border:1.5px solid #3182ce}
     .btn-sm{font-size:12px;padding:5px 12px}
-
+    .cat-cards{display:flex;flex-direction:column;gap:12px}
+    .cat-card{display:flex;align-items:center;gap:14px;padding:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;color:inherit}
+    .cat-card .cat-icon{font-size:32px;flex-shrink:0;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+    .cat-card .cat-text h3{font-size:17px;color:#1a202c;margin-bottom:2px}
+    .cat-card .cat-text p{font-size:12px;color:#718096}
     .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
     .gallery-grid a{display:block;border-radius:8px;overflow:hidden}
     .gallery-grid img{width:100%;height:140px;object-fit:cover}
-
     .doc-list{display:flex;flex-direction:column;gap:12px}
     .doc-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
     .doc-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center}
     .doc-text h3{font-size:15px;color:#1a202c;margin-bottom:3px}
     .doc-text p{font-size:12px;color:#718096;margin-bottom:6px}
-
     .step-list{display:flex;flex-direction:column;gap:10px}
     .step-item{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start}
     .step-num{font-size:20px;font-weight:800;color:#3182ce;flex-shrink:0;width:36px;height:36px;background:#ebf8ff;border-radius:50%;display:flex;align-items:center;justify-content:center}
     .step-text h3{font-size:14px;color:#1a202c;margin-bottom:2px}
     .step-text p{font-size:12px;color:#718096;margin-bottom:4px}
-
     .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     .value-item{text-align:center;padding:14px;background:#f7fafc;border-radius:8px}
     .value-item .v-icon{font-size:22px;margin-bottom:4px}
     .value-item .v-label{font-size:12px;font-weight:600;color:#1a202c}
-
     .contact-row{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
     .contact-card{display:flex;align-items:center;gap:12px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
     .contact-card-icon{font-size:22px;width:40px;height:40px;background:#edf2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .contact-card h4{font-size:13px;color:#1a202c}
     .contact-card p{font-size:12px;color:#718096}
-
     .cta-section{background:linear-gradient(135deg,#3182ce,#1e3a5f);color:#fff;text-align:center;padding:40px 16px}
     .cta-section h2{font-size:20px;margin-bottom:8px}
     .cta-section p{font-size:13px;opacity:0.9;margin-bottom:18px}
     .cta-section .btn-gold{font-size:14px;padding:12px 28px}
-
     .footer{background:#1a202c;color:#cbd5e0;padding:28px 16px;text-align:center;font-size:12px}
     .footer a{color:#cbd5e0}
     .switch-link{display:inline-block;margin-top:12px;padding:8px 16px;background:#2d3748;color:#fff;border-radius:20px;font-size:12px}
@@ -91,210 +86,123 @@
 <body>
 
   <header class="header">
-    <a href="#home" class="header-logo">
-      <img src="../images/logo.jpg" alt="Everquick">
-    </a>
-    <div class="header-lang">
-      <a href="cn.html">中文</a>
-      <a href="en.html" class="active">EN</a>
-    </div>
+    <a href="#home" class="header-logo"><img src="../images/logo.jpg" alt="Everquick"></a>
+    <div class="header-lang"><a href="cn.html">中文</a><a href="en.html" class="active">EN</a></div>
   </header>
 
   <section class="hero" id="home">
-    <h1>Dried Seaweed<br>Import Clearance</h1>
-    <p>Kappaphycus &amp; Cottonii — One-stop customs clearance from origin to Nansha Port, Guangzhou</p>
+    <h1>Global Supply Chain<br>Efficient Management</h1>
+    <p>Everquick Supply-Chain Management — global sourcing &amp; international logistics, one-stop supply chain solutions.</p>
     <div class="hero-btns">
-      <a href="#docs" class="btn btn-gold">View Documents</a>
-      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Contact Us</a>
+      <a href="global-sourcing.html" class="btn btn-gold">Global Sourcing</a>
+      <a href="#services" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Logistics</a>
     </div>
   </section>
 
-  <!-- Photo Gallery -->
-  <section class="section" id="gallery">
-    <div class="section-title">
-      <h2>On-Site Operations</h2>
-      <p>Kappaphycus alvarezii cultivation, harvesting, sun-drying, packing, and transportation</p>
+  <!-- Global Sourcing -->
+  <section class="section" id="sourcing">
+    <div class="section-title"><h2>Global Sourcing</h2><p>Premium Materials · Direct from Origin</p></div>
+    <div class="cat-cards">
+      <a href="#seaweed" class="cat-card" style="background:linear-gradient(135deg,#ebf8ff,#bee3f8);">
+        <div class="cat-icon" style="background:#3182ce;color:#fff;">🌿</div>
+        <div class="cat-text"><h3>Dried Seaweed</h3><p>Kappaphycus / Cottonii import clearance</p></div>
+      </a>
+      <a href="#shells" class="cat-card" style="background:linear-gradient(135deg,#fefcbf,#faf5ff);">
+        <div class="cat-icon" style="background:#d69e2e;color:#fff;">🐚</div>
+        <div class="cat-text"><h3>Shells</h3><p>Natural shells for crafts, construction &amp; feed</p></div>
+      </a>
+      <a href="#cocoa" class="cat-card" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);">
+        <div class="cat-icon" style="background:#e53e3e;color:#fff;">🍫</div>
+        <div class="cat-text"><h3>Cocoa Beans</h3><p>Premium cocoa from top-growing regions</p></div>
+      </a>
     </div>
+  </section>
+
+  <!-- Dried Seaweed Detail -->
+  <section class="section section-alt" id="seaweed">
+    <div class="section-title"><h2>🌿 Dried Seaweed Clearance</h2><p>Kappaphycus / Cottonii — origin to Nansha Port</p></div>
+    <div class="section-title" style="margin-top:24px;"><h2>On-Site Operations</h2><p>Cultivation, harvesting, sun-drying, packing, transport</p></div>
     <div class="gallery-grid">
-      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank">
-        <img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank">
-        <img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt="On-site photo">
-      </a>
-      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank">
-        <img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt="On-site photo">
-      </a>
+      <a href="../images/gallery/2023_05_21_07_54_IMG_8371.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_21_07_54_IMG_8371.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_21_08_01_IMG_8373.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_21_08_01_IMG_8373.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_24_13_14_IMG_8449.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_24_13_14_IMG_8449.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_24_13_32_IMG_8456.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_24_13_32_IMG_8456.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8514.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8514.jpg" alt=""></a>
+      <a href="../images/gallery/2023_05_25_08_32_IMG_8515.JPG" target="_blank"><img src="../images/gallery/thumbs/2023_05_25_08_32_IMG_8515.jpg" alt=""></a>
+      <a href="../images/gallery/44b216b0b592277b231991dbfdd90104.jpg" target="_blank"><img src="../images/gallery/thumbs/44b216b0b592277b231991dbfdd90104.jpg" alt=""></a>
+      <a href="../images/gallery/b7eda9f3c018fc4a265f591105cc14ce.jpg" target="_blank"><img src="../images/gallery/thumbs/b7eda9f3c018fc4a265f591105cc14ce.jpg" alt=""></a>
     </div>
-  </section>
 
-  <!-- Required Documents -->
-  <section class="section section-alt" id="docs">
-    <div class="section-title">
-      <h2>Required Import Documents</h2>
-      <p>Essential documents with sample references — full review and agency service</p>
-    </div>
+    <div class="section-title" style="margin-top:32px;"><h2>Required Documents</h2><p>Full review &amp; agency service</p></div>
     <div class="doc-list">
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#fffaf0;">🧾</div>
-        <div class="doc-text">
-          <h3>Commercial Invoice</h3>
-          <p>Issued by the exporter, stating cargo value and country of origin — key basis for customs valuation.</p>
-          <a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf4ff;">📄</div>
-        <div class="doc-text">
-          <h3>Sales Contract</h3>
-          <p>Official contract specifying product, quantity, unit price, trade terms (FOB/CIF), and payment.</p>
-          <a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 Page 1</a>
-          <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 Page 2</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#f0fff4;">📦</div>
-        <div class="doc-text">
-          <h3>Packing List</h3>
-          <p>Net weight, gross weight, volume, packaging per unit — must match B/L and Invoice.</p>
-          <a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#faf5ff;">🏷️</div>
-        <div class="doc-text">
-          <h3>Certificate of Origin</h3>
-          <p>Issued by exporting country — used to claim preferential tariff rates.</p>
-          <a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#fff5f5;">🪪</div>
-        <div class="doc-text">
-          <h3>Export License</h3>
-          <p>Required by some source countries — we coordinate with suppliers for timely processing.</p>
-          <a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf8ff;">🌿</div>
-        <div class="doc-text">
-          <h3>Phytosanitary Certificate</h3>
-          <p>Plant quarantine authority certifies freedom from harmful organisms — meets China entry requirements.</p>
-          <a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
-      <div class="doc-item">
-        <div class="doc-icon" style="background:#ebf4ff;">🚢</div>
-        <div class="doc-text">
-          <h3>Bill of Lading</h3>
-          <p>Proof of ownership and cargo release basis — verified for consistency with L/C and documents.</p>
-          <a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 View Sample</a>
-        </div>
-      </div>
+      <div class="doc-item"><div class="doc-icon" style="background:#fffaf0;">🧾</div><div class="doc-text"><h3>Commercial Invoice</h3><p>Key basis for customs valuation.</p><a href="../images/documents/商业发票.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf4ff;">📄</div><div class="doc-text"><h3>Sales Contract</h3><p>Product, quantity, trade terms (FOB/CIF).</p><a href="../images/documents/商业合同1.png" target="_blank" class="btn btn-outline btn-sm">📎 Pg1</a> <a href="../images/documents/商业合同2.png" target="_blank" class="btn btn-outline btn-sm">📎 Pg2</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#f0fff4;">📦</div><div class="doc-text"><h3>Packing List</h3><p>Net/gross weight, volume, packaging details.</p><a href="../images/documents/装箱单.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#faf5ff;">🏷️</div><div class="doc-text"><h3>Certificate of Origin</h3><p>For preferential tariff rates.</p><a href="../images/documents/产地证1.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#fff5f5;">🪪</div><div class="doc-text"><h3>Export License</h3><p>Required by some source countries.</p><a href="../images/documents/出口许可证.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf8ff;">🌿</div><div class="doc-text"><h3>Phytosanitary Cert.</h3><p>Meets China entry quarantine requirements.</p><a href="../images/documents/植物检疫证.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
+      <div class="doc-item"><div class="doc-icon" style="background:#ebf4ff;">🚢</div><div class="doc-text"><h3>Bill of Lading</h3><p>Proof of ownership &amp; cargo release.</p><a href="../images/documents/海运提单.png" target="_blank" class="btn btn-outline btn-sm">📎 Sample</a></div></div>
     </div>
-  </section>
 
-  <!-- Import Process -->
-  <section class="section">
-    <div class="section-title">
-      <h2>Import Clearance Process</h2>
-      <p>Full visibility from origin to your warehouse in China</p>
-    </div>
+    <div class="section-title" style="margin-top:32px;"><h2>Import Process</h2></div>
     <div class="step-list">
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <h3>Document Review</h3>
-          <p>Collect and review all documents 15 working days before arrival — identify issues in advance.</p>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <h3>International Shipping</h3>
-          <p>FCL/LCL ocean freight from origin directly to Nansha Port, Guangzhou with full cargo tracking.</p>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <h3>Customs Declaration</h3>
-          <p>Upon arrival — customs declaration, inspection coordination, and duty/VAT payment.</p>
-          <a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 View Declaration Sample</a>
-        </div>
-      </div>
-      <div class="step-item">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <h3>Warehousing &amp; Delivery</h3>
-          <p>After clearance — trucking, warehousing with QC, or direct factory delivery for last-mile fulfillment.</p>
-        </div>
-      </div>
+      <div class="step-item"><div class="step-num">1</div><div class="step-text"><h3>Document Review</h3><p>Review all documents 15 days before arrival.</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-text"><h3>International Shipping</h3><p>FCL/LCL ocean freight to Nansha Port.</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-text"><h3>Customs Declaration</h3><p>Declaration, inspection, duty &amp; VAT payment.<br><a href="../images/documents/报关单1.png" target="_blank" class="btn btn-outline btn-sm">📎 Declaration Sample</a></p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-text"><h3>Warehousing &amp; Delivery</h3><p>Trucking, QC, or direct factory delivery.</p></div></div>
     </div>
   </section>
 
-  <!-- Why Everquick -->
-  <section class="section section-alt">
-    <div class="section-title">
-      <h2>Why Choose Everquick</h2>
-      <p>Years of hands-on experience in dried seaweed import</p>
+  <!-- Shells -->
+  <section class="section" id="shells">
+    <div class="section-title"><h2>🐚 Shells</h2><p>Selected natural shells</p></div>
+    <div class="gallery-grid">
+      <a href="../images/sourcing/shells/01.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/01.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/02.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/02.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/03.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/03.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/04.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/04.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/05.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/05.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/06.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/06.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/07.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/07.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/08.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/08.jpg" alt="Shells"></a>
+      <a href="../images/sourcing/shells/09.jpg" target="_blank"><img src="../images/sourcing/shells/thumbs/09.jpg" alt="Shells"></a>
     </div>
-    <div class="values-grid">
-      <div class="value-item"><div class="v-icon">🎯</div><div class="v-label">Full Variety Coverage</div></div>
-      <div class="value-item"><div class="v-icon">🤝</div><div class="v-label">Origin Direct Network</div></div>
-      <div class="value-item"><div class="v-icon">⏱️</div><div class="v-label">Fast Clearance</div></div>
-      <div class="value-item"><div class="v-icon">🔒</div><div class="v-label">Safe &amp; Reliable</div></div>
+  </section>
+
+  <!-- Cocoa -->
+  <section class="section section-alt" id="cocoa">
+    <div class="section-title"><h2>🍫 Cocoa Beans</h2><p>Premium cocoa from top regions</p></div>
+    <div class="gallery-grid">
+      <a href="../images/sourcing/cocoa/01.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/01.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/02.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/02.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/03.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/03.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/04.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/04.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/05.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/05.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/06.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/06.jpg" alt="Cocoa"></a>
+      <a href="../images/sourcing/cocoa/07.jpg" target="_blank"><img src="../images/sourcing/cocoa/thumbs/07.jpg" alt="Cocoa"></a>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="section" id="contact">
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Tell us your origin, variety, and volume — we'll provide a complete clearance plan</p>
-    </div>
+    <div class="section-title"><h2>Contact Us</h2><p>Get a complete clearance plan &amp; cost estimate</p></div>
     <div class="contact-row">
-      <div class="contact-card">
-        <div class="contact-card-icon">📞</div>
-        <div><h4>Phone</h4><p>0086-13702274595</p></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">✉️</div>
-        <div><h4>Email</h4><p>tasmendeng@hotmail.com</p></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">📍</div>
-        <div><h4>Address</h4><p>Rm 602, No.19 Donghua 1st Rd, Jiangmen, Guangdong, China</p></div>
-      </div>
+      <div class="contact-card"><div class="contact-card-icon">📞</div><div><h4>Phone</h4><p>0086-13702274595</p></div></div>
+      <div class="contact-card"><div class="contact-card-icon">✉️</div><div><h4>Email</h4><p>tasmendeng@hotmail.com</p></div></div>
+      <div class="contact-card"><div class="contact-card-icon">📍</div><div><h4>Address</h4><p>Rm 602, No.19 Donghua 1st Rd, Jiangmen, Guangdong, China</p></div></div>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>Need dried seaweed import services?</h2>
-    <p>Get a complete import clearance plan and cost estimate</p>
+    <h2>Need import services?</h2>
+    <p>We'll provide a complete clearance plan and cost estimate</p>
     <a href="tel:0086-13702274595" class="btn btn-gold">📞 Call for Consultation</a>
   </section>
 
   <footer class="footer">
     <p>Everquick Supply-Chain Management (Guangdong) Co., Ltd.</p>
     <p style="margin-top:8px;opacity:0.6;">&copy; 2026 All rights reserved.</p>
-    <a href="../en/index.html?from=mobile" class="switch-link">💻 Switch to Desktop Version</a>
+    <a href="../en/index.html?from=mobile" class="switch-link">💻 Switch to Desktop</a>
   </footer>
 
 </body>
