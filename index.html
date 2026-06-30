@@ -70,11 +70,32 @@
   </style>
   <script>
     (function(){
+      var TRACKING_URL = 'PLACEHOLDER_REPLACE_AFTER_DEPLOY';
+
+      function sendVisit(geo) {
+        if (!TRACKING_URL || TRACKING_URL.indexOf('PLACEHOLDER') !== -1) return;
+        try {
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', TRACKING_URL, true);
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({
+            ip: (geo && geo.ip) || '',
+            country: (geo && geo.country) || '',
+            code: (geo && geo.countryCode) || '',
+            city: (geo && geo.city) || '',
+            page: location.pathname,
+            referrer: document.referrer || '',
+            ua: navigator.userAgent || '',
+            lang: navigator.language || ''
+          }));
+        } catch(e) {}
+      }
+
       var ua = navigator.userAgent;
       var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua) ||
                      (navigator.maxTouchPoints > 1 && window.innerWidth < 1024);
       if (isMobile) {
-        // 根据浏览器语言跳转
+        sendVisit({});
         var lang = navigator.language || '';
         if (lang.indexOf('zh') === 0) {
           location.replace('mobile/cn.html');
@@ -88,15 +109,20 @@
       var OVERRIDE_KEY = 'everquick_lang_override';
 
       // 如果用户带了 ?manual 参数，显示选择页，不自动跳转
-      if (location.search.indexOf('manual') !== -1) return;
+      if (location.search.indexOf('manual') !== -1) {
+        sendVisit({});
+        return;
+      }
 
       // 如果用户之前手动选过语言，直接跳转
       var langOverride = localStorage.getItem(OVERRIDE_KEY);
       if (langOverride === 'cn') {
+        sendVisit({});
         location.replace('cn/index.html');
         return;
       }
       if (langOverride === 'en') {
+        sendVisit({});
         location.replace('en/index.html');
         return;
       }
@@ -105,19 +131,25 @@
       fetch('https://geolocation-db.com/json/')
         .then(function(res){ return res.json(); })
         .then(function(data){
+          var geo = {
+            ip: data.IPv4,
+            country: data.country_name,
+            countryCode: data.country_code,
+            city: data.city || ''
+          };
+          sendVisit(geo);
           if (data.country_code === 'CN') {
             location.replace('cn/index.html');
           } else if (data.country_code) {
             location.replace('en/index.html');
           }
-          // API 无结果则留在选择页
         })
         .catch(function(){
-          // API 失败则留在选择页
+          sendVisit({});
         });
     })();
 
-    // 用户点击语言按钮时记住偏好
+    // 用户点击语言按钮时记住偏好 + 发送追踪
     document.addEventListener('DOMContentLoaded', function(){
       var links = document.querySelectorAll('.lang-btn');
       for (var i = 0; i < links.length; i++) {

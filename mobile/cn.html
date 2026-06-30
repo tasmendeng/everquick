@@ -232,6 +232,21 @@
     (function(){
       var OVERRIDE_KEY = 'everquick_lang_override';
       var STATS_KEY = 'everquick_visit_stats';
+      var TRACKING_URL = 'PLACEHOLDER_REPLACE_AFTER_DEPLOY';
+
+      function sendVisit(geo) {
+        if (!TRACKING_URL || TRACKING_URL.indexOf('PLACEHOLDER') !== -1) return;
+        try {
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', TRACKING_URL, true);
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({
+            ip: geo.ip || '', country: geo.country || '', code: geo.countryCode || '',
+            city: geo.city || '', page: location.pathname, referrer: document.referrer || '',
+            ua: navigator.userAgent || '', lang: navigator.language || ''
+          }));
+        } catch(e) {}
+      }
 
       // 语言切换记住偏好
       document.querySelectorAll('.header-lang a').forEach(function(link){
@@ -266,6 +281,12 @@
               countryCode: data.country_code,
               city: data.city || ''
             }));
+            sendVisit({
+              ip: data.IPv4,
+              country: data.country_name,
+              countryCode: data.country_code,
+              city: data.city || ''
+            });
             injectStatsBar();
           })
           .catch(function(){ injectStatsBar(); });

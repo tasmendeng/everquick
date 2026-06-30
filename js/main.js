@@ -2,6 +2,33 @@
    企业网站全局交互脚本
    ======================================== */
 
+// ===== 访客追踪配置 =====
+// 请将下方 URL 替换为你的 Google Apps Script Web 应用 URL
+var VISIT_TRACKING_URL = 'PLACEHOLDER_REPLACE_AFTER_DEPLOY';
+
+// 发送访客数据到后端
+function sendVisitData(geoData) {
+  if (!VISIT_TRACKING_URL || VISIT_TRACKING_URL.indexOf('PLACEHOLDER') !== -1) return;
+
+  var data = {
+    ip:       geoData.ip || '',
+    country:  geoData.country || '',
+    code:     geoData.countryCode || '',
+    city:     geoData.city || '',
+    page:     location.pathname,
+    referrer: document.referrer || '',
+    ua:       navigator.userAgent || '',
+    lang:     navigator.language || ''
+  };
+
+  try {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', VISIT_TRACKING_URL, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(data));
+  } catch(e) {}
+}
+
 // ===== 设备检测 & 自动跳转 =====
 (function() {
   // 如果 URL 带 ?from=mobile，说明用户手动选了手机版，存偏好
@@ -88,6 +115,14 @@
         city: data.city || '',
         timestamp: Date.now()
       }));
+
+      // 发送访客数据到追踪后端
+      sendVisitData({
+        ip: data.IPv4,
+        country: data.country_name,
+        countryCode: data.country_code,
+        city: data.city || ''
+      });
     })
     .catch(function() {
       // API 调用失败时不做跳转，统计栏使用本地计数
