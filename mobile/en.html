@@ -205,5 +205,87 @@
     <a href="../en/index.html?from=mobile" class="switch-link">💻 Switch to Desktop</a>
   </footer>
 
+  <script>
+    // ===== 访客统计 & IP 识别 & 语言跳转 (移动版) =====
+    (function(){
+      var OVERRIDE_KEY = 'everquick_lang_override';
+      var STATS_KEY = 'everquick_visit_stats';
+
+      // 语言切换记住偏好
+      document.querySelectorAll('.header-lang a').forEach(function(link){
+        link.addEventListener('click', function(){
+          if (this.href.indexOf('cn.html') !== -1) {
+            localStorage.setItem(OVERRIDE_KEY, 'cn');
+          } else if (this.href.indexOf('en.html') !== -1) {
+            localStorage.setItem(OVERRIDE_KEY, 'en');
+          }
+        });
+      });
+
+      var langOverride = localStorage.getItem(OVERRIDE_KEY);
+
+      // 非中国 IP 检测跳转 (仅无手动偏好时)
+      if (!langOverride) {
+        fetch('https://geolocation-db.com/json/')
+          .then(function(res){ return res.json(); })
+          .then(function(data){
+            if (data.country_code === 'CN') {
+              // 中国访客在英文移动页 → 跳转到中文移动页
+              if (location.pathname.indexOf('en.html') !== -1) {
+                location.replace('cn.html');
+              }
+            } else if (data.country_code) {
+              // 海外访客在中文移动页 → 跳转到英文移动页
+              if (location.pathname.indexOf('cn.html') !== -1) {
+                location.replace('en.html');
+              }
+            }
+            sessionStorage.setItem('everquick_geo', JSON.stringify({
+              ip: data.IPv4,
+              country: data.country_name,
+              countryCode: data.country_code,
+              city: data.city || ''
+            }));
+            injectStatsBar();
+          })
+          .catch(function(){ injectStatsBar(); });
+      } else {
+        injectStatsBar();
+      }
+
+      function injectStatsBar() {
+        var stats = JSON.parse(localStorage.getItem(STATS_KEY) || '{"count":0,"firstVisit":""}');
+        stats.count += 1;
+        if (!stats.firstVisit) {
+          var now = new Date();
+          stats.firstVisit = now.getFullYear() + '-' +
+            String(now.getMonth()+1).padStart(2,'0') + '-' +
+            String(now.getDate()).padStart(2,'0');
+        }
+        localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+
+        var geo = null;
+        try { geo = JSON.parse(sessionStorage.getItem('everquick_geo')); } catch(e){}
+
+        var div = document.createElement('div');
+        div.style.cssText = 'background:#0b1622;color:#8899aa;text-align:center;padding:10px 12px;font-size:11px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;';
+
+        var items = [];
+        if (geo && geo.ip) {
+          items.push('<span>🌐 IP: <strong style="color:#c0d0e0;">' + geo.ip + '</strong></span>');
+        }
+        if (geo && geo.country) {
+          items.push('<span>📍 ' + geo.country + '</span>');
+        }
+        items.push('<span>👁 Visit #<strong style="color:#d69e2e;">' + stats.count + '</strong></span>');
+        if (stats.firstVisit) {
+          items.push('<span style="opacity:0.6;">First: ' + stats.firstVisit + '</span>');
+        }
+        div.innerHTML = items.join('');
+        document.body.appendChild(div);
+      }
+    })();
+  </script>
+
 </body>
 </html>

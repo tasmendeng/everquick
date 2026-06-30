@@ -891,7 +891,33 @@ ul {
   }
 }
 
+/* --- 访客统计栏 --- */
+.visitor-bar {
+  background: #0b1622;
+  color: #8899aa;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid #1a2a3a;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.visitor-bar span {
+  white-space: nowrap;
+}
+
 @media (max-width: 540px) {
+  .visitor-bar {
+    gap: 10px;
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+
   .features-grid,
   .services-grid {
     grid-template-columns: 1fr;

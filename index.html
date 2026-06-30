@@ -81,8 +81,56 @@
         } else {
           location.replace('mobile/en.html');
         }
+        return;
       }
+
+      // 桌面端：IP 地理位置自动跳转
+      var OVERRIDE_KEY = 'everquick_lang_override';
+
+      // 如果用户带了 ?manual 参数，显示选择页，不自动跳转
+      if (location.search.indexOf('manual') !== -1) return;
+
+      // 如果用户之前手动选过语言，直接跳转
+      var langOverride = localStorage.getItem(OVERRIDE_KEY);
+      if (langOverride === 'cn') {
+        location.replace('cn/index.html');
+        return;
+      }
+      if (langOverride === 'en') {
+        location.replace('en/index.html');
+        return;
+      }
+
+      // 调用 IP 地理位置 API 自动判断
+      fetch('https://geolocation-db.com/json/')
+        .then(function(res){ return res.json(); })
+        .then(function(data){
+          if (data.country_code === 'CN') {
+            location.replace('cn/index.html');
+          } else if (data.country_code) {
+            location.replace('en/index.html');
+          }
+          // API 无结果则留在选择页
+        })
+        .catch(function(){
+          // API 失败则留在选择页
+        });
     })();
+
+    // 用户点击语言按钮时记住偏好
+    document.addEventListener('DOMContentLoaded', function(){
+      var links = document.querySelectorAll('.lang-btn');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(e){
+          var href = this.getAttribute('href');
+          if (href.indexOf('cn/') !== -1) {
+            localStorage.setItem('everquick_lang_override', 'cn');
+          } else if (href.indexOf('en/') !== -1) {
+            localStorage.setItem('everquick_lang_override', 'en');
+          }
+        });
+      }
+    });
   </script>
 </head>
 <body>

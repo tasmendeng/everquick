@@ -34,6 +34,130 @@
   }
 })();
 
+// ===== IP 地理位置检测 & 语言跳转 =====
+(function() {
+  var OVERRIDE_KEY = 'everquick_lang_override';
+  var STATS_KEY = 'everquick_visit_stats';
+
+  // 如果用户之前手动选择了语言，不再自动跳转
+  var langOverride = localStorage.getItem(OVERRIDE_KEY);
+  if (langOverride) return;
+
+  // 如果 URL 带 ?lang= 参数，记录偏好后不再跳转
+  var urlParams = new URLSearchParams(location.search);
+  if (urlParams.get('lang') === 'cn') {
+    localStorage.setItem(OVERRIDE_KEY, 'cn');
+    history.replaceState(null, '', location.pathname);
+    return;
+  }
+  if (urlParams.get('lang') === 'en') {
+    localStorage.setItem(OVERRIDE_KEY, 'en');
+    history.replaceState(null, '', location.pathname);
+    return;
+  }
+
+  // 调用免费 IP 地理位置 API
+  fetch('https://geolocation-db.com/json/')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var country = data.country_code;
+      if (!country) return;
+
+      var currentPath = location.pathname;
+      var isCN = currentPath.indexOf('/cn/') !== -1;
+      var isEN = currentPath.indexOf('/en/') !== -1;
+
+      // 中国访客在英文页 → 跳转到中文页
+      if (country === 'CN' && isEN) {
+        var cnPath = currentPath.replace('/en/', '/cn/');
+        location.replace(cnPath);
+        return;
+      }
+      // 海外访客在中文页 → 跳转到英文页
+      if (country !== 'CN' && country !== '' && isCN) {
+        var enPath = currentPath.replace('/cn/', '/en/');
+        location.replace(enPath);
+        return;
+      }
+
+      // 未跳转，存储地理位置信息供统计栏使用
+      sessionStorage.setItem('everquick_geo', JSON.stringify({
+        ip: data.IPv4,
+        country: data.country_name,
+        countryCode: data.country_code,
+        city: data.city || '',
+        timestamp: Date.now()
+      }));
+    })
+    .catch(function() {
+      // API 调用失败时不做跳转，统计栏使用本地计数
+    });
+})();
+
+// ===== 访客统计栏注入函数 =====
+function injectVisitorStats() {
+  var STATS_KEY = 'everquick_visit_stats';
+  var OVERRIDE_KEY = 'everquick_lang_override';
+
+  // 更新访问计数
+  var stats = JSON.parse(localStorage.getItem(STATS_KEY) || '{"count":0,"firstVisit":""}');
+  stats.count += 1;
+  if (!stats.firstVisit) {
+    var now = new Date();
+    stats.firstVisit = now.getFullYear() + '-' +
+      String(now.getMonth() + 1).padStart(2, '0') + '-' +
+      String(now.getDate()).padStart(2, '0');
+  }
+  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+
+  // 读取地理位置信息
+  var geoData = null;
+  try {
+    geoData = JSON.parse(sessionStorage.getItem('everquick_geo'));
+  } catch(e) {}
+
+  var isCNPath = location.pathname.indexOf('/cn/') !== -1 || location.pathname === '/' || location.pathname.indexOf('/mobile/cn') !== -1;
+  var isChinese = isCNPath;
+
+  // 构建统计栏 HTML
+  var bar = document.createElement('div');
+  bar.className = 'visitor-bar';
+  bar.style.cssText = 'background:#0b1622;color:#8899aa;text-align:center;padding:14px 20px;font-size:13px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;border-top:1px solid #1a2a3a;';
+
+  var items = [];
+
+  // IP 信息
+  if (geoData && geoData.ip) {
+    items.push('<span>🌐 ' + (isChinese ? '您的IP' : 'Your IP') + ': <strong style="color:#c0d0e0;">' + geoData.ip + '</strong></span>');
+  }
+
+  // 国家/城市
+  if (geoData && geoData.country) {
+    var locText = '📍 ' + geoData.country;
+    if (geoData.city) locText += ', ' + geoData.city;
+    items.push('<span>' + locText + '</span>');
+  }
+
+  // 访问次数
+  items.push('<span>👁 ' + (isChinese ? '您是第' : 'Visit #') + ' <strong style="color:#d69e2e;">' + stats.count + '</strong> ' + (isChinese ? '次访问本站' : '') + '</span>');
+
+  // 首次访问日期
+  if (stats.firstVisit) {
+    items.push('<span style="opacity:0.6;font-size:11px;">' + (isChinese ? '首次访问' : 'First visit') + ': ' + stats.firstVisit + '</span>');
+  }
+
+  // 语言覆盖提示
+  var langOverride = localStorage.getItem(OVERRIDE_KEY);
+  if (langOverride) {
+    items.push('<span style="opacity:0.6;font-size:11px;">' + (isChinese ? '已手动选择语言' : 'Language manually selected') + '</span>');
+  }
+
+  bar.innerHTML = items.join('');
+
+  // 插入到 body 最后
+  document.body.appendChild(bar);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== 移动端菜单切换 =====
@@ -183,5 +307,22 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
   }
+
+  // ===== 访客统计 & IP识别 & 自动语言跳转 =====
+  // 用户手动点击语言切换后记住偏好
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('.lang-switch a');
+    if (link) {
+      var href = link.getAttribute('href');
+      if (href.indexOf('/cn/') !== -1) {
+        localStorage.setItem('everquick_lang_override', 'cn');
+      } else if (href.indexOf('/en/') !== -1) {
+        localStorage.setItem('everquick_lang_override', 'en');
+      }
+    }
+  });
+
+  // 注入访客统计栏
+  injectVisitorStats();
 
 });
